@@ -873,13 +873,15 @@ padding-bottom: 40px;
     text-align: center;
 }
     .portfolio-image img{
-        height: 400px;
+        height: 100%-50px;
         width: 100%;
         position: relative;
+        
     }
     .portfolio-image{
         height: 400px;
         width: 40%;
+        filter: brightness(800000%);
     }
 .portfolio-image img::before{
     content: "";
