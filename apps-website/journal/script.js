@@ -1,5 +1,5 @@
 document.getElementById('downloadBtn').addEventListener('click', function() {
-    alert('Redirecting to the Amazon Appstore...');
+    window.open("https://www.amazon.com/gp/product/B0DMLCN7ZX")
 });
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
