@@ -76066,7 +76066,7 @@ I5(a,b,c){var s=null
 return A.aAC(a,A.ao6(s,new A.hs(4,A.cP(12),B.kr),s,s,s,s,s,s,!0,s,s,s,s,s,s,B.hV,!0,s,s,s,s,s,s,s,s,s,s,s,s,B.NR,b,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s),c,B.eB,new A.aaP())},
 I4(a,b){return this.I5(a,b,1)}}
 A.aaQ.prototype={
-$0(){A.Sr(A.eK("mailto://npshital@gmail.com",0,null))},
+$0(){A.Sr(A.eK("mailto:npshital@gmail.com",0,null))},
 $S:0}
 A.aaR.prototype={
 $0(){A.Sr(A.eK("https://shitalneupane.com.np",0,null))},
