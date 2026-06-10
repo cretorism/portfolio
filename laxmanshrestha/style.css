@@ -1,0 +1,610 @@
+/* NEPALESE SCHOLASTIC BRUTALIST PORTFOLIO THEME */
+/* Styled with inspiration from raw blogger templates (tamangindra.com.np) */
+/* Integrated with simple Red and Blue academic styling */
+
+:root {
+  --bg-color: #fafbfc; /* Refreshing, clean cool gray-white background */
+  --card-bg: #ffffff;  /* High-contrast pristine white cards */
+  --text-color: #0f172a; /* Slate 900 for modern readability */
+  --primary-accent: #dc2626; /* national flag crimson red */
+  --secondary-accent: #1e40af; /* deep royal blue */
+  --highlight-blue: #eff6ff; /* soft selection block blue */
+  --highlight-red: #fef2f2; /* soft selection block red */
+  --shadow-color: #0f172a;
+  --border-color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.62;
+  padding: 12px;
+}
+
+/* Brutalist background grid */
+.brutalist-grid-bg {
+  background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+/* Utilities */
+.font-mono {
+  font-family: 'Fira Mono', Courier, monospace;
+}
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-xs { font-size: 11px; }
+.text-sm { font-size: 13px; }
+.margin-top-6 { margin-top: 6px; }
+.margin-top-12 { margin-top: 12px; }
+.margin-top-20 { margin-top: 20px; }
+.margin-bottom-8 { margin-bottom: 8px; }
+.hidden { display: none !important; }
+
+/* Themes Colors badges */
+.bg-red { background-color: var(--primary-accent); color: #fff; }
+.bg-blue { background-color: var(--secondary-accent); color: #fff; }
+.bg-light-red { background-color: var(--highlight-red); }
+.bg-light-blue { background-color: var(--highlight-blue); }
+
+.border-red {
+  border: 4px solid var(--border-color);
+  position: relative;
+}
+
+.border-blue {
+  border: 4px solid var(--border-color);
+  position: relative;
+}
+
+.border-red-thick {
+  border: 3px solid var(--border-color);
+}
+
+.border-blue-thick {
+  border: 3.5px solid var(--border-color);
+}
+
+.border-bottom-dotted {
+  border-bottom: 2px dotted #cbd5e1;
+}
+
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Hover lift effect standard for Brutalism */
+.hover-lift {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hover-lift:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0px var(--shadow-color);
+}
+
+/* TOP DECORATION TICKER */
+.top-ticker {
+  background-color: var(--border-color);
+  color: #fff;
+  font-family: 'Fira Mono', monospace;
+  font-size: 11px;
+  overflow: hidden;
+  padding: 8px 0;
+  position: relative;
+  width: 100%;
+  border: 4px solid var(--border-color);
+  margin-bottom: 12px;
+}
+
+.ticker-wrap {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 40s linear infinite;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding-right: 50px;
+}
+
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* BLOG FRAMEWORK CONTAINER */
+.blog-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* HERO HEADER */
+.blog-header {
+  background-color: #fff;
+  border: 4px solid var(--border-color);
+  padding: 40px 24px;
+  position: relative;
+  text-align: center;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-top: 8px solid var(--primary-accent);
+  border-bottom: 8px solid var(--secondary-accent);
+}
+
+.header-stamp {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--secondary-accent);
+  color: #fff;
+  font-family: 'Fira Mono', monospace;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+.language-selector {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 4px;
+}
+
+.lang-btn {
+  background: #fff;
+  border: 2px solid var(--border-color);
+  font-family: 'Fira Mono', monospace;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 3px 6px;
+  transition: all 0.1s ease;
+}
+
+.lang-btn.active, .lang-btn:hover {
+  background-color: var(--primary-accent);
+  color: #fff;
+  border-color: var(--primary-accent);
+}
+
+.blog-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  color: var(--primary-accent);
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 0px var(--border-color);
+}
+
+.blog-subtitle {
+  font-size: 14px;
+  color: var(--secondary-accent);
+  letter-spacing: -0.2px;
+  font-weight: 700;
+}
+
+/* NAV LINKS */
+.blog-nav {
+  display: flex;
+  background-color: #fff;
+  border: 4px solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.nav-item {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 15px 24px;
+  border-right: 4px solid var(--border-color);
+  white-space: nowrap;
+  transition: background-color 0.1s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+  background-color: var(--secondary-accent);
+  color: #fff;
+}
+
+/* LAYOUT MAIN GRID */
+.blog-main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media(min-width: 868px) {
+  .blog-main-grid {
+    grid-template-columns: 1fr 340px;
+  }
+}
+
+/* LEFT COLUMN AREA */
+.blog-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* WELCOME BOX */
+.info-box {
+  background-color: #ffffff;
+  padding: 24px;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  border-left: 10px solid var(--secondary-accent);
+}
+
+.badge {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 10px;
+  padding: 4px 8px;
+  margin-bottom: 12px;
+  vertical-align: middle;
+  border: 2px solid var(--border-color);
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  color: var(--secondary-accent);
+}
+
+.p-text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #334155;
+  margin-bottom: 14px;
+}
+
+.signature {
+  border-top: 2px dashed #e2e8f0;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #475569;
+}
+
+/* POSTS */
+.blog-post {
+  background-color: #fff;
+  padding: 24px;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  border-left: 10px solid var(--primary-accent);
+}
+
+.info-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-list li {
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.35;
+  color: var(--secondary-accent);
+}
+
+.post-body {
+  color: #334155;
+}
+
+/* INITIATIVES CARDS GRID */
+.initiatives-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+@media(min-width: 500px) {
+  .initiatives-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.init-card {
+  background-color: var(--highlight-blue);
+  border: 2px solid var(--border-color);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.init-card h5 {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--secondary-accent);
+  margin-bottom: 6px;
+}
+
+/* COLLABORATION ITEMS STYLE */
+.collab-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.collab-item {
+  padding: 8px 0;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.collab-item:last-child {
+  border-bottom: none;
+}
+
+.collab-item strong {
+  color: var(--primary-accent);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* RESOURCE CARD & DOWNLOAD LIST */
+.resource-card {
+  border-left: 10px solid var(--secondary-accent);
+}
+
+.download-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.download-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #fff;
+  padding: 12px;
+  font-size: 13px;
+  transition: background-color 0.15s ease;
+}
+
+@media(min-width: 600px) {
+  .download-row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.file-name {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.download-btn {
+  background: var(--primary-accent);
+  color: white;
+  border: 3px solid var(--border-color);
+  font-weight: bold;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 6px 14px;
+  flex-shrink: 0;
+  box-shadow: 3px 3px 0px var(--shadow-color);
+}
+
+.download-btn:hover {
+  background: var(--secondary-accent);
+}
+
+.download-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px var(--shadow-color);
+}
+
+/* SIDEBAR STYLINGS */
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-widget {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  border-top: 6px solid var(--secondary-accent);
+}
+
+.widget-title {
+  color: #fff;
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 11px;
+  margin-bottom: 14px;
+  border: 2px solid var(--border-color);
+}
+
+/* 3D ILLUST PORTRAIT AVATAR (Pure CSS brutalist design representing a professional headshot) */
+.profile-avatar {
+  background-color: #f1f5f9;
+  width: 105px;
+  height: 105px;
+  margin: 0 auto 16px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar-face {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  width: 45px;
+  height: 52px;
+  background-color: #ffedd5; /* high quality skin tone */
+  border-radius: 20px 20px 14px 14px;
+  border: 2.5px solid var(--border-color);
+}
+
+.avatar-hair {
+  position: absolute;
+  top: -8px;
+  left: -4px;
+  width: 49px;
+  height: 18px;
+  background-color: #1e293b; /* neat black hair cut */
+  border-radius: 12px 12px 0 0;
+  border: 2px solid var(--border-color);
+}
+
+.avatar-glasses {
+  position: absolute;
+  top: 12px;
+  left: 2px;
+  width: 37px;
+  height: 12px;
+  border-top: 2px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar-glasses::before, .avatar-glasses::after {
+  content: '';
+  width: 14px;
+  height: 12px;
+  border: 2px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.avatar-mustache {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  width: 21px;
+  height: 6px;
+  background-color: #1e293b;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 6px;
+  color: var(--secondary-accent);
+}
+
+.profile-desc {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.profile-meta {
+  text-align: center;
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 10px;
+  color: #475569;
+}
+
+/* ODOMETER / TOTAL VIEWS WIDGET */
+.odometer-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin: 12px 0 4px 0;
+}
+
+.odo-box {
+  background-color: var(--border-color);
+  color: #f87171; /* High contrast energetic red odo */
+  font-family: 'Fira Mono', monospace;
+  font-size: 26px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 2px;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* PORTALS LIST */
+.portal-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portal-links li a {
+  color: var(--secondary-accent);
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  border-bottom: 1px dashed #cbd5e1;
+  padding-bottom: 2px;
+}
+
+.portal-links li a:hover {
+  color: var(--primary-accent);
+  padding-left: 4px;
+  transition: padding-left 0.1s ease;
+}
+
+/* SCHOOL STATUS COUNTERS */
+.school-stats {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.school-stats li {
+  padding: 4px 6px;
+  background-color: var(--highlight-red);
+  border: 1px solid var(--border-color);
+}
+
+/* FOOTER BASE CARD */
+.blog-footer-base {
+  background-color: #fff;
+  border: 4px solid var(--border-color);
+  padding: 24px;
+  text-align: center;
+  box-shadow: 4px 4px 0px var(--shadow-color);
+  margin-top: 25px;
+  border-top: 6px solid var(--primary-accent);
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+
